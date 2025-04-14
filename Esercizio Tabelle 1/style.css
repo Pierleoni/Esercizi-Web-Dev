@@ -1,0 +1,42 @@
+:root{
+    --background: #12c2e9; /* fallback for old browsers */
+    --background: -webkit-linear-gradient(to bottom, #12c2e9, #c471ed, #f64f59); /* Chrome 10-25, Safari 5.1-6 */
+    --background-color-website: rgba(94, 190, 94, 0.775);
+    
+    --bg-color-upTable: grey;
+    --bg-color-midTable: white;
+    --text-color:  black ;
+}
+html{height: 100%;width: 100%;}
+body{
+    font-family:"Open Sans", sans-serif;
+    background: var(--background-color-website);
+    color: var(--text-color);
+}
+
+
+
+.img_top{
+    
+    padding: 50px;
+    margin: 0 auto;
+}
+.upTable{
+    background-color: var(--bg-color-upTable);
+    padding: 0 auto;
+    margin: 0 auto;
+    width:100%;
+    border: white, solid black 10px ;
+    text-align: center;
+}
+
+.midTable{
+    background-color: var(--bg-color-midTable);
+    padding: 0 auto ;
+    margin: 0 auto;
+    width: 50%;
+    /* text-align: right; */
+}
+
+
+
