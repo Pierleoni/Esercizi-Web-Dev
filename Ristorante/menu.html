@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Menù del giorno</title>
+    <style>
+    body {
+        font-family: 'Verdana', sans-serif;
+        background-color: #ffdca8;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    th, td {
+        border: 1px solid #999;
+        padding: 10px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #ffe08a;
+    }
+
+    tr:nth-child(even) {
+        background-color: #fff8e1;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #fffdf5;
+    }
+    .center-button{
+        display: flex;
+        justify-content: center;
+    }
+    .menu-button{
+        padding: 10px 20px;
+        background-color: rgb(229, 126, 24);
+        color: rgb(87, 87, 242);
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    .menu-button:hover{
+        background-color: #e8d5a6;
+    }
+    </style>
+</head>
+<body>
+    <h1>Menù del giorno</h1>
+    <table>
+    <tr>
+        <th>Nome del piatto</th>
+        <th>Descrizione</th>
+        <th>Prezzo</th>
+    </tr>
+    <tr>
+        <td>Lasagne</td>
+        
+        <td>Classiche con ragù e besciamella</td>
+        <td>€9.50</td>
+    </tr>
+    <tr>
+        <td>Risotto ai funghi</td>
+        <td>Con funghi porcini freschi</td>
+        <td>€11.00</td>
+    </tr>
+    <tr>
+        <td>Pizza Margherita</td>
+        <td>Pomodoro, mozzarella e basilico</td>
+        <td>€7.00</td>
+    </tr>
+    </table>
+    <div  class="center-button">
+        <button class="menu-button"><a href="index.html">Torna alla home</a></button>
+    </div>
+    
+</body>
+</html>
