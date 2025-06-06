@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>Esercizio 4</h1>
+    <!-- primo step -->
+    <hr style="width: 20%;">
+    <div id="contenitore"></div>
+        <script>
+        //terzo step
+        for(let x = 0;x<=100;x+=5){
+            //secondo step
+            let miohr = document.createElement("hr");
+            //miohr.style.width = "20%";
+            miohr.setAttribute("style", "width:20;");
+            miohr.setAttribute("style", `width: ${x}%`);
+            document.getElementById("contenitore").appendChild(miohr)
+        }
+            
+
+
+    </script>
+
+</body>
+</html>

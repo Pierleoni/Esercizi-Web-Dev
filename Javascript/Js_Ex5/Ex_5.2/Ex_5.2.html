@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="range1"></div>
+    <div id="range2"></div>
+    <script>
+        function num(a){
+            if (a>=1 && a<=7 ){
+                return true
+            }
+            else{
+                return false
+            }
+        
+        };
+        let out = num(2);
+        document.getElementById("range1").innerHTML = out;
+
+        function mostraGiorni (a){
+            if (num(a)){
+                let giorni = ["Lunedi", "martedì", "mercoledì", "giovedì", "venerdì", "sabato", "domenica"];
+                return giorni [a-1];
+
+            } else{
+                return "Peccato, non posso indovinare il giorno";
+            }
+        }
+        let numero = 4;
+        let out2 = mostraGiorni(numero);
+        document.getElementById("range2").innerHTML = out2;
+    </script>
+</body>
+</html>

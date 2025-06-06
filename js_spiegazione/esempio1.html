@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="risultato"></div>
+    <div id = "saluto"></div>
+    <script>
+        let numero = prompt("inserisci il primo numero");
+        <!-- Trasformo numero da str a int -->
+        numero = parseInt(numero);
+        console.log(numero)
+
+        let numero_2 = prompt("Inserire un numero:")
+        numero_2 = parseInt(numero_2)
+        document.getElementById("risultato").innerHTML = "la somma di" + numero + "+" +numero_2+ "è"  +  (numero+numero_2);
+        let str = "Marco"
+        document.getElementById("saluto").innerHTML = "Ciao" + str
+    </script>
+</body>
+</html>
