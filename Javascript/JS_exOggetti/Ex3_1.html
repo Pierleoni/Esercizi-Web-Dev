@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 3.1</title>
+</head>
+<body>
+    <h1>L'oggetto canzone</h1>
+    <div id="canzone"></div>
+    <script>
+        const canzoni={
+            canzone1:{
+                titolo: "Princess of the night",
+                "nome band": "Saxon",
+                album: "Denim and Leather",
+                anno: 1981
+
+            },
+            canzone2:{
+                titolo: "Ace of Spades",
+                "nome band": "Motorhead",
+                album: "Ace of Spades",
+                anno: 1980
+            },
+            canzone3:{
+                titolo: "Gangland",
+                "nome band": "Iron Maiden",
+                album: "The Number of he Beast",
+                anno: 1982
+            }
+        };
+    
+
+        
+
+        document.getElementById("canzone").innerHTML = canzoni.canzone1.titolo + "<br>";
+        document.getElementById("canzone").innerHTML += canzoni.canzone1["nome band"] + "<br>";
+        document.getElementById("canzone").innerHTML += canzoni.canzone1.album + "<br>";
+        document.getElementById("canzone").innerHTML += canzoni.canzone1.anno + "<br>";
+        
+        document.getElementById("canzone").innerHTML+= "<br>"
+
+        document.getElementById("canzone").innerHTML += canzoni.canzone2.titolo + "<br>" + canzoni.canzone2["nome band"] + "<br>" + canzoni.canzone2.album + "<br>" + canzoni.canzone2.anno
+        
+        document.getElementById("canzone").innerHTML+= "<br>"
+        document.getElementById("canzone").innerHTML+= "<br>"
+        
+        document.getElementById("canzone").innerHTML += canzoni.canzone3.titolo + "<br>"+ canzoni.canzone3["nome band"] + "<br>" + canzoni.canzone3.album + "<br>" + canzoni.canzone3.anno
+        
+        const titolo = prompt("Inserisci il titolo della nuova canzone:");
+        const nomeBand = prompt("Inserisci il nome del cantante o della band:");
+        const album = prompt("Inserisci il nome dell'album:");
+        const anno = prompt("Inserisci l'anno di pubblicazione:");
+        
+        const newKey = "canzone" + (Object.keys(canzoni).length +1);
+
+        canzoni[newKey] = {
+            titolo: titolo,
+            "nome band": nomeBand,
+            album: album,
+            anno: parseInt(anno)
+        };
+
+        let out = "";
+        for (let key in canzoni){
+            out += `${key} <br>`;
+            out += `Titolo: ${canzoni[key].titolo} <br>`;
+            out += `Band: ${canzoni[key]["nome band"]} <br>`;
+            out += `Album: ${canzoni[key].album} <br>`;
+            out += `Anno di pubblicazione: ${canzoni[key].anno} <br><br>`;
+        };
+        document.getElementById("canzone").innerHTML = out
+    </script>
+</body>
+</html>

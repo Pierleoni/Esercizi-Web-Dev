@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 3.2</title>
+</head>
+<body>
+    <h1>Rubrica</h1>
+    <div id="rubrica"></div>
+    <script>
+        let rubrica = {
+            utente1:{
+                nome: "Fabio",
+                cognome: "Mancini",
+                telefono: parseInt("3478926801"),
+                indirizzo:{
+                    via: "Piazza Garibaldi",
+                    "numero civico": 23
+                },
+            },
+            utente2:{
+                nome: "Jessica",
+                cognome: "Polidoro",
+                telefono: parseInt("3490234512"),
+                indirizzo: {
+                    via: "Largo Dei Mille",
+                    "numero civico": 12,
+                
+                },
+                
+            },
+        };
+
+        document.getElementById("rubrica").innerHTML = `Nome utente: ${rubrica.utente1.nome}<br>` + `Cognome utente: ${rubrica.utente1.cognome}<br>` + `Numero di telefono: ${rubrica.utente1.telefono}<br>` + `Indirizzo:<br> Via: ${rubrica.utente1.indirizzo["via"]}` + `<br> Numero civico: ${rubrica.utente1.indirizzo["numero civico"]}<br><br>`;
+        document.getElementById("rubrica").innerHTML += `Nome utente: ${rubrica.utente2.nome}<br>` + `Cognome utente: ${rubrica.utente2.cognome}<br>` + `Numero di telefono: ${rubrica.utente2.telefono}<br>` + `Indirizzo:<br> Via: ${rubrica.utente2.indirizzo["via"]}` + `<br> Numero civico: ${rubrica.utente2.indirizzo["numero civico"]}<br>`;
+        // elimina la proprietà indirizzo usando la destrutturizzazione con rinomina e rest operator 
+        // Estrae la proprietà indirizzo e la rinomina nella variabile '_'
+        //Raccoglie la proprietà con il rest operator e la mette in un nuovo oggetto chiamato 'newObject'
+        const {indirizzo:_, ...newObj} = rubrica;
+        document.getElementById("rubrica").innerHTML += `<br>Nome utente: ${newObj.utente1.nome}<br>` + `Cognome utente: ${newObj.utente1.cognome}<br>` + `Numero di telefono: ${newObj.utente1.telefono}<br>` + `Indirizzo:<br> Via: ${newObj.utente1._}<br>` + ` Numero civico: ${newObj.utente1._}`;
+        document.getElementById("rubrica").innerHTML += `<br>Nome utente: ${newObj.utente2.nome}<br>` + `Cognome utente: ${newObj.utente2.cognome}<br>` + `Numero di telefono: ${newObj.utente2.telefono}<br>` + `Indirizzo:<br> Via: ${newObj.utente2._}<br>` + `<br> Numero civico: ${newObj.utente2._}`;
+    </script>
+</body>
+</html>

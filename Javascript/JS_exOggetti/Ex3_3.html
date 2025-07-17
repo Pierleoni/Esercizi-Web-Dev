@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 3.3</title>
+</head>
+<body>
+    <h1>L'oggetto studente</h1>
+    <div id="studente"></div>
+    <script>
+        //1. Definisci un oggetto "studente"
+        function Studente(nome,cognome,voto)  {
+            this.nome= nome;
+            this.cognome= cognome;
+            this.voto= voto;
+            // 2. Aggiungi un metodo all'oggetto "studente" chiamato "calcolaMedia"
+            this.calcolaMedia= function (voto, voto2){
+                return (voto+ voto2)/2;
+            };
+        };
+
+        //3. Crea un nuovo oggetto "studente1" utilizzando l'oggetto "studente" come modello.
+        const studente1 = new Studente("Massimo", "Mancini", 23)
+        //4. Chiama il metodo "calcolaMedia" sull'oggetto "studente1" passando due voti come argomenti
+        const media = studente1.calcolaMedia(23, 30)
+
+        // Stampa complessiva dell'oggetto 'studente1'
+        document.getElementById("studente").innerHTML = ` Nome: ${studente1.nome}<br>
+        Cognome: ${studente1.cognome}<br>
+        Voto: ${studente1.voto} <br>
+        Media calcolata: ${media}<br>`;
+
+        // 5. Crea un altro oggetto "studente2" utilizzando l'oggetto "studente" come modello.
+        const studente2 = new Studente("Erica", "Rossi", 22);
+
+        // 6. Chiama il metodo "calcolaMedia" sull'oggetto "studente2" passando due voti come argomenti. 
+        const media2 = studente2.calcolaMedia(22, 28);
+        document.getElementById("studente").innerHTML += `<br>Nome: ${studente2.nome}<br>
+        Cognome: ${studente2.cognome}<br>
+        Voto: ${studente2.voto}<br>
+        Media calcolata: ${media2}<br>`;
+
+        /* 7. Confronta i voti dei due studenti ("studente1" e "studente2") 
+        e stampa un messaggio che indica quale studente ha ottenuto un voto più alto */
+        if (studente1.voto > studente2.voto){
+            document.getElementById("studente").innerHTML += ` ${studente1.nome} ha un voto più alto di ${studente2.nome} `
+        }else {
+            document.getElementById("studente").innerHTML += `${studente2.nome} ha un voto più alto di ${studente1.voto}`
+        }
+
+        /*8. Modifica il voto dello "studente1" e del "studente2" 
+        assegnando nuovi valori alla proprietà "voto". */
+        studente1.voto = 24
+        studente2.voto = 27
+        document.getElementById("studente").innerHTML += `<br>Media di ${studente1.nome}: ${studente1.calcolaMedia(24, 23)}<br>
+        Media di ${studente2.nome}: ${studente2.calcolaMedia(27,22)}<br>`
+
+        if (studente1.voto > studente2.voto){
+            document.getElementById("studente").innerHTML += ` ${studente1.nome} ha un voto più alto di ${studente2.nome} `
+        }else {
+            document.getElementById("studente").innerHTML += `${studente2.nome} ha un voto più alto di ${studente1.voto}`
+        }
+
+
+
+    </script>
+</body>
+</html>
