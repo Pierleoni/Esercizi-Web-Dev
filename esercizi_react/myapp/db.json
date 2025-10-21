@@ -1,0 +1,90 @@
+
+    {
+      "users": [
+        {
+          "id": "1",
+          "nome": "Mario",
+          "cognome": "Rossi",
+          "email": "mario.rossi@example.com",
+          "telefono": "3331234567"
+        },
+        {
+          "id": "2",
+          "nome": "Laura",
+          "cognome": "Bianchi",
+          "email": "laura.bianchi@example.com",
+          "telefono": "3478901234"
+        },
+        {
+          "id": "3",
+          "nome": "Giuseppe",
+          "cognome": "Verdi",
+          "email": "giuseppe.verdi@example.com",
+          "telefono": "3285678901"
+        },
+        {
+          "id": "4",
+          "nome": "Anna",
+          "cognome": "Romano",
+          "email": "anna.romano@example.com",
+          "telefono": "3392345678"
+        },
+        {
+          "id": "5",
+          "nome": "Luca",
+          "cognome": "Gallo",
+          "email": "luca.gallo@example.com",
+          "telefono": "3669012345"
+        },
+        {
+          "id": "6",
+          "nome": "Francesca",
+          "cognome": "Conti",
+          "email": "francesca.conti@example.com",
+          "telefono": "3496789012"
+        },
+        {
+          "id": "7",
+          "nome": "Alessandro",
+          "cognome": "Costa",
+          "email": "alessandro.costa@example.com",
+          "telefono": "3343456789"
+        },
+        {
+          "id": "8",
+          "nome": "Sara",
+          "cognome": "Mancini",
+          "email": "sara.mancini@example.com",
+          "telefono": "3209876543"
+        },
+        {
+          "id": "9",
+          "nome": "Marco",
+          "cognome": "Ricci",
+          "email": "marco.ricci@example.com",
+          "telefono": "3454321098"
+        },
+        {
+          "id": "10",
+          "nome": "Valentina",
+          "cognome": "Moretti",
+          "email": "valentina.moretti@example.com",
+          "telefono": "3387654321"
+        }
+      ],
+      "posts": [
+        {
+          "id": "10",
+          "title": "Fantasy Patch",
+          "body": "Roba da nerd qwerty"
+        },
+        {
+          "id": "12",
+          "title": "Fantasy Patch",
+          "body": "Roba da nerd qwerty"
+        }
+      ],
+      "comments": []
+    }
+
+
